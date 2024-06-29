@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+}
+nav{
+    display: flex;
+    max-width: 100%;
+    padding: 20px;
+    margin: auto;
+    justify-content:space-between;
+    align-items: center;
+    height: 100px;
+}
+nav .navbar{
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    color: black;
+    font-weight: 500;
+    
+}
+nav .logo{
+    padding: 0px 40px 0px 20px;
+}
+.left{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ nav  ul{ 
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 40px;
+}
+nav ul a{
+    text-decoration: none;
+    cursor: pointer;
+    color: black;
+}
+ nav ul a:hover{ 
+    color: rgb(115, 88, 235);
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-decoration-thickness: 3px;
+}
+nav .registration{
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+.login{ 
+    background-color: white;
+    color: black;
+    padding: 6px 15px;
+    font-size: 15px;
+    font-weight: 500;
+    border-color: white;
+}
+.login a{
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+.login a:hover{
+    color: rgb(115, 88, 235);;
+    
+}
+.btn{
+    background-color: rgb(115, 88, 235);
+    color: white;
+    padding: 6px 15px;
+    font-size: 15px;
+    font-weight: bolder;
+    border-color: rgb(115, 88, 235);
+    border-radius: 5px;
+    cursor: pointer;
+}
+.separation{
+    background-color: rgb(115, 88, 235);
+    height: 3px;
+    width: 10vw;
+    animation: slider 5s linear  infinite alternate-reverse;
+}
+@keyframes slider {
+    from{
+        transform: translateX(0vw);
+    }
+    to{
+        transform: translateX(90vw);
+    }
+    
+}
+.main{
+    background-image: url(assets/hero-decor.png);
+    background-position: top center;
+    /* background-size: max(1200px,100vw); */
+    background-size: 100vw;     /*Distortion at <1000px*/
+    background-repeat: no-repeat;
+    height: 100vh; 
+    position: relative;
+    z-index: -1;
+}
+.box1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    gap: 15px;
+    padding-top: 40px; 
+}
+.box1 :nth-child(1){
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-family: "Inter", sans-serif;
+    font-size: 20px;
+    font-weight: bolder;
+    color: rgb(33, 33, 33);
+}
+.box1 :nth-child(2){
+    font-family: "Inter", sans-serif;
+    font-size: 64px;
+    font-weight: bolder;
+    color: rgb(46, 33, 81);
+}
