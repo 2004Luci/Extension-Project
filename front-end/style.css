@@ -1,0 +1,386 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Inter", sans-serif;
+}
+nav{
+    display: flex;
+    max-width: 100%; 
+    padding: 20px;
+    margin: auto;
+    justify-content:space-between;
+    align-items: center;
+    height: 100px;
+}
+nav .navbar{
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    color: black;
+    font-weight: 500;
+    
+}
+nav .logo{
+    padding: 0px 40px 0px 20px;
+}
+.left{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ nav  ul{ 
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 40px;
+}
+nav ul a{
+    text-decoration: none;
+    cursor: pointer;
+    color: black;
+}
+ nav ul a:hover{ 
+    color: rgb(115, 88, 235);
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-decoration-thickness: 3px;
+}
+nav .registration{
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+.login{ 
+    background-color: white;
+    color: black;
+    padding: 6px 15px;
+    font-size: 15px;
+    font-weight: 700;
+    border-color: white;
+}
+.login a{
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+.login a:hover{
+    color: rgb(115, 88, 235);;
+    
+}
+.btn{
+    background-color: rgb(115, 88, 235);
+    color: white;
+    padding: 6px 15px;
+    font-family: "Inter", sans-serif;
+    font-size: 15px;
+    font-weight: bolder;
+    border-color: rgb(115, 88, 235);
+    border-radius: 5px;
+    cursor: pointer;
+}
+.separation{
+    background-color: rgb(115, 88, 235);
+    height: 3px;
+    width: 10vw;
+    animation: slider 5s linear  infinite alternate-reverse;
+}
+@keyframes slider {
+    from{
+        transform: translateX(0vw);
+    }
+    to{
+        transform: translateX(90vw);
+    }
+    
+}
+.main{
+    background-image: url(assets/hero-decor.png);
+    background-position: top center;
+    /* background-size: max(1200px,100vw); */
+    background-size: max(1000px,100vw);     /*Distortion at <1000px*/
+    background-repeat: no-repeat;
+    height: 65vh; 
+    width: 100vw;
+    position: relative;
+    z-index: -20;
+}
+.box1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    gap: 15px;
+    padding-top: 40px; 
+}
+.box1 :nth-child(1){
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-family: "Inter", sans-serif;
+    font-size: 20px;
+    font-weight: bolder;
+    color: rgb(33, 33, 33);
+}
+.box1 :nth-child(2){
+    font-family: "Inter", sans-serif;
+    font-size: 64px;
+    font-weight: bolder;
+    color: rgb(46, 33, 81);
+}
+.box2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 35px;
+    background-color: #fff;
+    border-radius: 28px;
+    width: 40vw;
+    padding: 25px 1px 25px 1px; 
+    margin: 20px 30vw 10px 30vw;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 3px 48px 0 rgba(0, 0, 0, .05);
+}
+.box2 :nth-child(1){
+    font-size: 22px;
+    font-weight: 700;
+    color: rgb(46, 33, 81);
+}
+/*
+.container input{
+    box-sizing: border-box;
+    padding: 15px 101px 8px 24px;
+    width: 95%;
+    font-size: 16px;
+    font-weight: 400;
+    border-radius: 15px; 
+    background-color: #fff;
+    border: 1px solid grey;
+    position: absolute;
+}
+.container button{
+    position: relative;
+    z-index: 10;
+    margin: 0px -455px 0px 10px;
+    border-radius: 15px;
+    border-color: rgb(115, 88, 235);
+    background-color: rgb(115, 88, 235);
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 10px;
+}
+*/
+
+/*FAULTS:- Cursor:text in input, input box text, input:hover{border-color:rgb(115, 88, 235)} & cursor:pointer for button NOT WORKING*/
+.box2 :nth-child(2){                    /*Class=container*/                   
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+} 
+.container input{
+    padding: 10px 101px 8px 24px;
+    font-size: 16px;
+    font-weight: 400;
+    border: 1px solid grey;
+    border-radius: 15px;
+    background-color: #fff;
+    position: relative; 
+    z-index: 10;
+    cursor: text;
+}
+.container input:hover{
+    cursor: text;
+    border-color: rgb(115, 88, 235);
+}
+.box2 .container button{
+    display: flex;
+    justify-content: center;
+    align-self: center; 
+    text-align: center;
+    font-size: 15px;
+    font-weight: 600;
+    color: white;
+    padding: 12px 20px 12px 20px;
+    background-color: rgb(115, 88, 235);
+    border-color: rgb(115, 88, 235);
+    border-radius: 15px;
+    cursor: pointer;
+    position: relative;
+    z-index: 10;
+}
+/*---------------------------------------------------------------------------*/
+.box3{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    font-weight: 400;
+    color: rgb(142, 142, 143);
+    margin-top: 15px;
+}
+.secondary{
+    height: 30vh;
+    max-width: 100vw;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.one{
+    height: 80%;
+    width: 54vw;
+    padding: 20px;
+    background: #f1f4f9;
+    border: 1px solid #e6e8ed;
+    border-radius: 28px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;   
+    gap: 15px;
+}
+.one span{
+    font-family: "Roboto", "Arial", "Helvetica", sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    color: rgb(25, 36, 53);
+}
+.one p{
+    font-family: "Roboto", "Arial", "Helvetica", sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    color: rgb(25, 36, 53);
+}
+.two{
+    height: 80%;
+    width: 36vw;;
+    padding: 20px;
+    background: #f1f4f9;
+    border: 1px solid #e6e8ed;
+    border-radius: 28px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    gap: 15px;
+}
+.firstline{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+.two .firstline img{
+    object-fit: contain;
+    height: 50px;
+    width: 50px;
+    border-radius: 8px;
+}
+.firstline span{
+    font-family: "Roboto", "Arial", "Helvetica", sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    color: rgb(25, 36, 53);
+}
+.secondline{
+    font-family: "Roboto", "Arial", "Helvetica", sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    color: rgb(25, 36, 53);
+}
+.two > :nth-last-child(2){
+    background-color: rgb(115, 88, 235);
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    width: 25%;
+    border: 2px solid rgb(115, 88, 235);
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+}
+.two > :nth-last-child(2) a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+body:has(.two > :nth-last-child(2):hover) .two{
+    background-color: rgb(231, 229, 243);
+    border: 2px solid rgb(115, 88, 235);
+}
+.one:hover{
+    background-color: rgb(231, 229, 243);
+    border: 2px solid rgb(115, 88, 235);
+}
+.end{
+    margin-top: 25px;
+    background-color: rgb(142, 142, 143);
+    height: 1px;
+    width: 100vw;
+}
+footer{
+    width: 80vw;
+    margin: auto;
+    padding: 34px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.footer-items{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.footer-items a{
+    text-decoration: none;
+    color: rgb(142, 142, 143);
+    font-size: 14px;
+}
+.footer-items a:hover{
+    color: rgb(46, 33, 81);
+}
+
+@media screen and (max-width:1300px) {
+    .box2 :nth-child(2){                    
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
+}
+@media screen and (max-width:1000px) {
+    .secondary{
+        height: auto;
+        max-width: 100vw;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        gap: 15px;
+    }
+    footer{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+    }
+    .footer-items{
+        align-items: center;
+    }
+}
