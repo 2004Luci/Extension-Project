@@ -1,0 +1,14 @@
+{
+    "name": "email-scraper-backend",
+    "version": "1.0.0",
+    "description": "Backend server for email scraping application",
+    "main": "index.js",
+    "dependencies": {
+      "axios": "^0.24.0",
+      "cheerio": "^1.0.0-rc.11",
+      "csv-parse": "^5.0.2",
+      "express": "^4.17.3",
+      "iconv-lite": "^0.6.4"
+    }
+  }
+  
