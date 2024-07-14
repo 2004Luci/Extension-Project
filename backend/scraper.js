@@ -1,3 +1,30 @@
+//------------------------------------------- Possible Fixes --------------------------------------------
+
+//To load the library
+/*
+require(['foo'], function (foo) {
+    //foo is now loaded.
+});
+*/
+/*
+var axios, cheerio, iconv, fs, csvWriter;
+require(['axios'], function(axios){
+});
+require(['cheerio'], function(cheerio){
+});
+require(['iconv'], function(iconv){
+});
+require(['fs'], function(fs){
+});
+require(['csvWriter'], function(csvWriter){
+});
+*/
+/*
+
+Require Issue: https://requirejs.org/docs/errors.html#notloaded
+
+*/ 
+//-------------------------------------------------------------------------------------------------------
 const axios = require('axios');
 const cheerio = require('cheerio');
 const iconv = require('iconv-lite');
@@ -35,7 +62,7 @@ const linksToVisit = new Queue();
 const foundEmails = new Set();
 
 const writer = csvWriter({ headers: ["Email"] });
-writer.pipe(fs.createWriteStream('emails.csv'));
+writer.pipe(createWriteStream('emails.csv'));
 
 const irrelevantExtensions = ['.pdf', '.mov', '.jpg', '.png', '.gif', '.zip', '.mp3', '.mp4', '.avi', '.wmv', '.m4v', '.jpeg', '.JPG'];
 const relevantKeywords = ['contact', 'about', 'team', 'staff', 'support', 'help'];
@@ -46,9 +73,9 @@ let visitedCount = 0;
 
 async function scrapePage(url) {
     try {
-        const response = await axios.get(url, { responseType: 'arraybuffer' });
-        const decodedContent = iconv.decode(response.data, 'utf-8');
-        return cheerio.load(decodedContent);
+        const response = await get(url, { responseType: 'arraybuffer' });
+        const decodedContent = decode(response.data, 'utf-8');
+        return load(decodedContent);
     } catch (error) {
         console.error(`Failed to scrape ${url}: ${error.message}`);
         return null;
@@ -135,4 +162,4 @@ async function main(url) {
     writer.end();
 }
 
-module.exports = main;
+module.exports = main();
