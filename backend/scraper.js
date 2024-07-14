@@ -19,11 +19,11 @@ require(['fs'], function(fs){
 require(['csvWriter'], function(csvWriter){
 });
 */
+
 /*
-
 Require Issue: https://requirejs.org/docs/errors.html#notloaded
-
 */ 
+
 //-------------------------------------------------------------------------------------------------------
 const axios = require('axios');
 const cheerio = require('cheerio');
