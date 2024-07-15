@@ -6,13 +6,28 @@
     <title>Silver Email Finder | STTL</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="assets/silvertouch_img.png">
+    <!-- Load RequireJS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script>
+    <script>
+        // Configure RequireJS
+        requirejs.config({
+            paths: {
+                'axios': 'https://cdnjs.cloudflare.com/ajax/libs/axios/0.24.0/axios.min' // Adjust the path as needed
+            }
+        });
+
+        // Load script.js after configuring RequireJS
+        require(['script'], function() {
+            console.log('script.js loaded');
+        });
+    </script>
 </head>
 <body>
     <header>
         <nav>
             <div class="left">
                 <div class="logo">
-                    <img src="assets/silvertouch_img.png" alt="img">
+                    <img src="assets/silvertouch_img.png" alt="Silvertouch Logo">
                 </div>
                 <div class="navbar">
                     <ul>
@@ -52,16 +67,14 @@
         <div class="one">
             <span>Find emails by domain</span>
             <p>Find all email addresses on any domain in a matter of minutes. The Silver Email Finder streamlines the process of finding all email addresses on any website, saving your time and effort. It efficiently and accurately extracts contact information, ensuring you never miss an email. Perfect for lead generation, outreach, and networking, our tool automates this task, allowing you to focus on what matters most.</p>
-            <!--<img src="" alt="img"> -->                                    <!--Insert an image of the working of the extension made-->
         </div>
         <div class="two">
             <div class="firstline">
-                <img src="assets/emailfinder_img.png" alt="img">
+                <img src="assets/emailfinder_img.png" alt="Silver Email Finder">
                 <span>Silver Email Finder</span>
             </div>
             <span class="secondline">Find emails on company websites and Google</span>
-            <div><a href="back-end/scraper.py" target="_blank">Install Extension</a></div>  <!--Insert .py or .exe file link here in the anchor tag-->
-            <!-- <img src="" alt="img">              Insert an image of the working of the extension made -->
+            <div><a href="back-end/scraper.py" target="_blank">Install Extension</a></div>
         </div>
     </section>
     <div class="end"></div>
@@ -104,8 +117,7 @@
             <a href="https://www.silvertouch.com/blog/">Blog</a>
         </div>
     </footer>
+    <!-- Load your custom script.js -->
     <script src="script.js"></script>
 </body>
 </html>
-
-
